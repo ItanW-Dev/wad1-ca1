@@ -1,14 +1,149 @@
-html {
-  box-sizing: border-box;
-  font-size: 16px;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
+/* ===== Base Reset ===== */
 body {
-  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
-  margin: 2em;
-  background-color: lightgrey;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f5;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== Layout Container ===== */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3 {
+  margin-top: 0;
+  color: #2e7d32;
+  font-weight: normal;
+}
+
+/* ===== Links ===== */
+a {
+  color: #2e7d32;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+a:hover {
+  color: #43a047;
+  text-decoration: underline;
+}
+
+/* ===== Sections / Cards ===== */
+section, .card, .ui.segment {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  transition: 0.2s ease;
+}
+
+section:hover, .card:hover, .ui.segment:hover {
+  border-color: #2e7d32;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Buttons ===== */
+button, .button {
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover, .button:hover {
+  background-color: #43a047;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ===== Forms ===== */
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border: 1px solid #d0d0d0;
+  background-color: #fafafa;
+  transition: 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #2e7d32;
+  outline: none;
+  background-color: #ffffff;
+}
+
+/* ===== Navigation ===== */
+nav {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+nav a {
+  margin-right: 15px;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+/* ===== Lists ===== */
+ul {
+  padding-left: 20px;
+}
+
+li {
+  padding: 5px 0;
+  transition: 0.2s ease;
+}
+
+li:hover {
+  color: #2e7d32;
+}
+
+/* ===== Tables ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+}
+
+tr:hover {
+  background-color: #f1f8f4;
+}
+
+th {
+  color: #2e7d32;
+  font-weight: normal;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffffff;
+  border-top: 1px solid #e0e0e0;
+  color: #666;
 }

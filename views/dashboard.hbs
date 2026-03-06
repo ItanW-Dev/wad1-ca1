@@ -2,28 +2,28 @@
 
 <section class="ui left aligned middle aligned segment">
   
-  <h2>Playlist App Dashboard</h2>
+  <h2>Guitar Collection Dashboard</h2>
   
-  {{#unless playlists}}
+  {{#unless guitars}}
     <h3 class="ui message">
-      Start adding your playlists!
+      Start adding your guitars!
     </h3>
   {{/unless}}
 
-  {{#each playlists}}
+  {{#each guitars}}
     <section class="ui left aligned middle aligned segment">
 
       <h3 class="ui header">
-        {{title}}
+        {{series}}
       </h3>
-      {{#unless songs.length}}
+      {{#unless guitars.length}}
         <p>
-          Empty playlist!
+          Empty series!
         </p>
         {{else}}
-        <p>{{songs.length}} songs</p>
+        <p>{{guitars.length}} guitars</p>
       {{/unless}}
-      <a href="/playlist/{{id}}" ><i class="folder open black outline icon"></i></a>
+      <a href="/guitar/{{id}}" ><i class="folder open black outline icon"></i></a>
 
     </section>
   {{/each}}

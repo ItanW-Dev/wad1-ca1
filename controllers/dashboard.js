@@ -1,18 +1,18 @@
 'use strict';
 
 import logger from "../utils/logger.js";
-import playlistStore from "../models/playlist-store.js";
+import guitarCollection from "../models/guitar-collection.js";
 
 const dashboard = {
   createView(request, response) {
     logger.info("Dashboard page loading!");
     
     const viewData = {
-      title: "Playlist App Dashboard",
-      playlists: playlistStore.getAllPlaylists()
+      title: "Guitar App Dashboard",
+      guitars: guitarCollection.getAllGuitars()
     };
     
-    logger.debug(viewData.playlists);
+    logger.debug(viewData.guitars);
     
     response.render('dashboard', viewData);
   },
