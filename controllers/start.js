@@ -6,11 +6,11 @@ const start = {
   createView(request, response) {
     logger.info("Start page loading!");
     
-     const viewData = {
+    // Set up page title for the start/home page
+    const viewData = {
       title: "Welcome to the Playlist app!",
     };
 
-    //logger.debug(viewData);
     response.render('start', viewData);   
   },
 };

@@ -12,8 +12,10 @@ import guitars from './controllers/guitarlist.js';
 router.get('/', start.createView);
 router.get('/dashboard', dashboard.createView);
 router.get('/about', about.createView);
+// Route to display a specific guitar by ID
 router.get('/guitar/:id', guitars.createView);
 
+// Catch-all route for handling 404 errors
 router.get('/error', (request, response) => response.status(404).end('Page not found.'));
 
 export default router;

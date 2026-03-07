@@ -7,15 +7,14 @@ const about = {
   createView(request, response) {
     logger.info("About page loading!");
     
-   const viewData = {
+    // Gather app info to display on the about page
+    const viewData = {
       title: "Welcome to the Playlist app!",
       info: appStore.getAppInfo()
     };
     
-    
     response.render('about', viewData);   
   },
 };
-
 
 export default about;

@@ -1,5 +1,5 @@
 {{> menu id="dashboard"}}
-
+<!-- Dashboard displaying all guitar collections -->
 <section class="ui left aligned middle aligned segment">
   
   <h2>Guitar Collection Dashboard</h2>
@@ -10,6 +10,7 @@
     </h3>
   {{/unless}}
 
+  <!-- Loop through each guitar collection/series -->
   {{#each guitars}}
     <section class="ui left aligned middle aligned segment">
 
@@ -21,6 +22,7 @@
           Empty series!
         </p>
         {{else}}
+        <!-- Display count and link to guitar details -->
         <p>{{guitars.length}} guitars</p>
       {{/unless}}
       <a href="/guitar/{{id}}" ><i class="folder open black outline icon"></i></a>
