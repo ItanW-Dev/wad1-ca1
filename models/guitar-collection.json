@@ -27,30 +27,63 @@
       "guitars": [
         {
           "id" : "07",
-          "title": "Piano Concerto No. 0",
-          "description": "Beethoven"
+          "title": "RG Axe Design Lab",
+          "description": "Ibanez has been creating innovations which do not only fit the unique demands of players from that period, but also eventually turn into industrial standards, such as 7 string, 8 string and Multi scale guitars. All these started from our attitude to be Innovative, Cutting-Edge and Pioneer. Axe Design Lab is the series fully represents this attitude."
         },
         {
           "id" : "08",
-          "title": "Piano Concerto No. 4",
-          "description": "Beethoven"
+          "title": "RG VISIONS",
+          "description": "Materializing the vision of Ibanez. Untethered from the paradigm, allowing for infinite possibilities. This spirit is the driving force of our imagination, and the nature of our craftsmanship. Ibanez VISIONS This instrument is a masterwork that connects the past, present, and future of Ibanez as one."
         },
         {
           "id" : "09",
-          "title": "Piano Concerto No. 6",
-          "description": "Beethoven"
+          "title": "RG j.custom",
+          "description": "Ibanez j.custom guitars are manufactured by an elite group of highly skilled luthiers trained in producing instruments of uncompromised quality. The j.custom designation represents every advance in design and technology Ibanez has developed over the decades: the best woods, neck, fret treatments, in-demand pickup, and top-quality hardware. Each is masterfully crafted to the highest standards to ensure unparalleled sound, maximum playability and exquisite beauty."
+        }
+        ,
+        {
+          "id" : "10",
+          "title": "RG Prestige",
+          "description": "There are three principles behind the Ibanez Prestige line: Precision, Performance, and Playability. Prestige combines high-tech manufacturing techniques with old-world Japanese craftsmanship, in order to achieve true innovation in design and construction. The series incorporates ideas and suggestions from musicians from around the world as the cornerstones of the Prestige production process."
         }
       ]
     },
     {
       "id" : "03",
       "series": "S series",
-      "songs": []
+      "guitars": [
+        {
+          "id" : "11",
+          "title": "S Axe Design Lab",
+          "description": "Ibanez has been creating innovations which do not only fit the unique demands of players from that period, but also eventually turn into industrial standards, such as 7 string, 8 string and Multi scale guitars. All these started from our attitude to be Innovative, Cutting-Edge and Pioneer. Axe Design Lab is the series fully represents this attitude."
+        },
+        {
+          "id" : "12",
+          "title": "S Prestige",
+          "description": "There are three principles behind the Ibanez Prestige line: Precision, Performance, and Playability. Prestige combines high-tech manufacturing techniques with old-world Japanese craftsmanship, in order to achieve true innovation in design and construction. The series incorporates ideas and suggestions from musicians from around the world as the cornerstones of the Prestige production process."
+        },
+        {
+          "id" : "13",
+          "title": "S Premium",
+          "description": "Designed to Inspire, all Ibanez Premium series are manufactured with select tone woods, high-profile electronics, hardware and dedicated skills of craftsmanship and care in details for your musical journey. The richness of sound, stunning appearance and unrivalled playability of the Ibanez Premium series will open the gate of your reservoir of inspiration."
+        },
+        {
+          "id" : "14",
+          "title": "S Standard",
+          "description": "Ibanez builds guitars for players of all levels—from beginners to the most demanding masters of the instrument. Regardless of price, Ibanez always strives to offer the absolute best sound, style, and playability in its class. The Standard series incorporates all the staples the Ibanez brand is famous for, such as fast necks, floating trems, and high-octane distortion in a package that is available and accessible to most players."
+        }
+      ]
     },
     {
       "id" : "04",
       "series": "Alpha series",
-      "songs": []
+      "guitars": [
+        {
+          "id" : "15",
+          "title": "Alpha ",
+          "description": "As its very name, ALPHA, signifies a beginning, this Ibanez series is no exception. The Ibanez Alpha is forged for the modern, cutting-edge guitar player, boasting an array of truly unique and contemporary features. Its ergonomically designed body silhouette and contours deliver an unprecedented, immersive playing experience. The Ibanez Alpha won't just change how you approach playing; it will open completely new horizons for your music."
+        }
+      ]
     }
   ]
 }

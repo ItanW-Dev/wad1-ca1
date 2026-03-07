@@ -2,23 +2,37 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f4f6f5;
+  background-color: #8dc4a8;
   color: #222;
   line-height: 1.6;
 }
 
-/* ===== Layout Container ===== */
 .container {
   width: 90%;
   max-width: 1100px;
-  margin: 40px auto;
+  margin: 100px auto;
+  background-color: #bcdcb6;
+}
+
+/* tables */
+table.ui.unstackable.striped.table tr th{
+  background-color: #dff9b5;
+}
+
+table.ui.unstackable.striped.table tr td{
+  background-color: #8dc4a8;
+ border: 1px solid #c8e6c9;
+}
+
+table.ui.unstackable.striped.table tr td:hover{
+background-color: #81bd86;
 }
 
 /* ===== Headings ===== */
 h1, h2, h3 {
   margin-top: 0;
   color: #2e7d32;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 /* ===== Links ===== */
@@ -33,49 +47,36 @@ a:hover {
   text-decoration: underline;
 }
 
-/* ===== Sections / Cards ===== */
-section, .card, .ui.segment {
-  background-color: #ffffff;
+/* ===== Sections ===== */
+section, .ui.segment {
   padding: 25px;
   border-radius: 8px;
   margin-bottom: 20px;
-  border: 1px solid #e0e0e0;
   transition: 0.2s ease;
 }
 
-section:hover, .card:hover, .ui.segment:hover {
+section:hover, .ui.segment:hover {
   border-color: #2e7d32;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* ===== Buttons ===== */
-button, .button {
-  background-color: #2e7d32;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: 0.2s ease;
+section.ui.left.aligned.middle.aligned.ui.segment{
+  background-color: #d7f5d2;
+  color: #2e7d32;
+  font-size: 100%;
 }
 
-button:hover, .button:hover {
-  background-color: #43a047;
+section.ui.left.aligned.middle.aligned.ui.segment section.ui.left.aligned.middle.aligned.ui.segment{
+background-color: #dff9b5;
 }
 
-button:active {
-  transform: scale(0.97);
+section.ui.left.aligned.middle.aligned.ui.segment section.ui.left.aligned.middle.aligned.ui.segment:hover{
+background-color: #81bd86;
+  color: #2e7d32;
 }
 
-/* ===== Forms ===== */
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border: 1px solid #d0d0d0;
-  background-color: #fafafa;
-  transition: 0.2s ease;
+section.ui.center.aligned.middle.aligned.segment{
+background-color: #d7f5d2;
 }
 
 input:focus, textarea:focus, select:focus {
@@ -85,65 +86,44 @@ input:focus, textarea:focus, select:focus {
 }
 
 /* ===== Navigation ===== */
-nav {
-  background-color: #ffffff;
-  padding: 15px 20px;
-  border-bottom: 1px solid #e0e0e0;
-}
 
+nav{
+  border-radius: 15px;
+}
 nav a {
+  
   margin-right: 15px;
   padding: 6px 10px;
-  border-radius: 5px;
+  background-color: #dff9b5;
 }
 
 nav a:hover {
-  background-color: #e8f5e9;
+  background-color: #81bd86;
+  color: #2e7d32;
+  border-radius: 15px;
+}
+
+nav.ui.stackable.menu{
+  background-color: #dff9b5;
+} 
+
+div.right.menu{
+  margin-right: 15px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  background-color: #dff9b5;
+}
+div a#dashboard, div a#about{
   color: #2e7d32;
 }
 
-/* ===== Lists ===== */
-ul {
-  padding-left: 20px;
-}
-
-li {
-  padding: 5px 0;
-  transition: 0.2s ease;
-}
-
-li:hover {
+div a#dashboard:hover, div a#about:hover{
+ background-color: #81bd86;
   color: #2e7d32;
 }
 
-/* ===== Tables ===== */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-  background-color: white;
-}
-
-th, td {
-  padding: 10px;
-  border-bottom: 1px solid #e0e0e0;
-  text-align: left;
-}
-
-tr:hover {
-  background-color: #f1f8f4;
-}
-
-th {
-  color: #2e7d32;
-  font-weight: normal;
-}
-
-/* ===== Footer ===== */
-footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #ffffff;
-  border-top: 1px solid #e0e0e0;
-  color: #666;
+div.middle.menu img{
+ width: 40%;
+ height: 100%;
+ padding: 2px;
 }

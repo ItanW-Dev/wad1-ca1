@@ -1,28 +1,50 @@
 {{> menu}}
-<section class="ui left aligned middle aligned segment">
-  <div class="ui cards">
- {{#each info}}
-<div class="ui centered card">
-  <div class="image">
-    <img src="{{image}}"> 
-  </div>
-  <div class="content">
-    <a class="header">{{fullname}}</a>
-    <div class="meta">
-      <span class="date">Joined in {{joined}}</span>
-    </div>
-    <div class="description">
-      {{name}} is a {{job}} living in {{city}}.
-    </div>
-  </div>
-  <div class="extra content">
-    <a>
-      <i class="user icon"></i>
-       {{mates}} contacts
-    </a>
-  </div>
-</div>
 
-{{/each}}
+ <div class="ui four statistics" style="margin-top: 1em;">
+    
+  {{#with info}}
+     
+    <div class="statistic">
+      <div class="value">
+        <i class="music icon"></i> 
+      </div>
+      <div class="label">
+        App Title: <br>
+        {{appTitle}}
+      </div>
+    </div>
+    
+    <div class="statistic">
+      <div class="value">
+        <i class="code branch icon"></i> 
+      </div>
+      <div class="label">
+        App Version: <br>
+        Version {{version}}
+      </div>
+    </div> 
+     
+    <div class="statistic">
+      <div class="value">
+        <i class="map pin icon"></i> 
+      </div>
+      <div class="label">
+        Made in: <br>
+        {{location}}
+      </div>
+    </div> 
+	
+    <div class="statistic">
+      <div class="value">
+        <i class="user icon"></i> 
+      </div>
+      <div class="label">
+        Created by: <br>
+        {{creator.0.name}}
+      </div>
+    </div>
+	
+	
+  {{/with}}
+  
 </div>
-</section>
