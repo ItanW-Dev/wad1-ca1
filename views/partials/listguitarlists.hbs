@@ -1,0 +1,36 @@
+
+<section class="ui left aligned middle aligned segment">
+  
+  <h2>Guitar Collection Dashboard</h2>
+  
+  {{#unless guitars}}
+    <h3 class="ui message">
+      Start adding your guitars!
+    </h3>
+  {{/unless}}
+
+  <!-- Loop through each guitar collection/series -->
+  {{#each guitars}}
+    <section class="ui left aligned middle aligned segment">
+
+      <h3 class="ui header">
+        {{series}}
+      </h3>
+      {{#unless guitars.length}}
+        <p>
+          Empty series!
+        </p>
+        {{else}}
+        <!-- Display count and link to guitar details -->
+        <p>{{guitars.length}} guitars</p>
+      {{/unless}}
+      <a href="/guitar/{{id}}" ><i class="folder open black outline icon"></i></a>
+      <a href="/dashboard/deleteguitarlist/{{id}}">
+   <i class="ui trash black icon"></i>
+</a>
+
+
+    </section>
+  {{/each}}
+
+</section>

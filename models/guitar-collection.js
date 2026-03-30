@@ -16,10 +16,24 @@ const guitarCollection = {
   },
   
   // Find a specific guitar series by ID
-  getGuitar(id) {
+  getGuitarList(id) {
     return this.store.findOneBy(this.collection, (guitar => guitar.id === id));
 },
 
+addGuitar(id, guitar) {
+    this.store.addItem(this.collection, id, this.array, guitar);
+},
+
+addGuitarList(guitarList) {
+    this.store.addCollection(this.collection, guitarList);
+},
+removeGuitar(id, guitarId) {
+    this.store.removeItem(this.collection, id, this.array, guitarId);
+},
+removeGuitarList(id) {
+    const guitarList = this.getGuitarList(id);
+    this.store.removeCollection(this.collection, guitarList);
+},
 
 };
 

@@ -1,9 +1,20 @@
 {{> menu}}
 <!-- Guitar details page -->
-<section class="ui center aligned middle aligned scrolling segment">
-  <h2 class="ui header">
-    {{singleGuitar.title}}
-  </h2>
-  <!-- Include guitar list partial -->
-  {{> listguitars}}
-</section>
+{{#with singleGuitar}}
+  <section class="ui center aligned middle aligned segment">
+    <h2 class="ui header">
+      {{series}}
+    </h2>
+    <p>
+      {{description}}
+    </p>
+
+     {{> listguitars}}
+  </section>
+
+  <section class="ui center aligned middle aligned segment">
+
+    {{> addguitar}}
+  </section>
+{{/with}}
+

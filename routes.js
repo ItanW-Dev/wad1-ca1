@@ -14,6 +14,10 @@ router.get('/dashboard', dashboard.createView);
 router.get('/about', about.createView);
 // Route to display a specific guitar by ID
 router.get('/guitar/:id', guitars.createView);
+router.post('/guitar/:id/addguitar', guitars.addGuitar);
+router.post('/dashboard/addguitarlist', dashboard.addGuitarList);
+router.get('/guitar/:id/deleteguitar/:guitarid', guitars.deleteGuitar);
+router.get('/dashboard/deleteguitarlist/:id', dashboard.deleteGuitarList);
 
 // Catch-all route for handling 404 errors
 router.get('/error', (request, response) => response.status(404).end('Page not found.'));
