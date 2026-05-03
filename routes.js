@@ -8,6 +8,7 @@ import start from './controllers/start.js';
 import dashboard from './controllers/dashboard.js';
 import about from './controllers/about.js';
 import guitars from './controllers/guitarlist.js';
+import stats from './controllers/stats.js';
 
 router.get('/', start.createView);
 router.get('/dashboard', dashboard.createView);
@@ -15,9 +16,13 @@ router.get('/about', about.createView);
 // Route to display a specific guitar by ID
 router.get('/guitar/:id', guitars.createView);
 router.post('/guitar/:id/addguitar', guitars.addGuitar);
+router.post('/guitar/:id/updateguitar/:guitarid', guitars.updateGuitar);
 router.post('/dashboard/addguitarlist', dashboard.addGuitarList);
 router.get('/guitar/:id/deleteguitar/:guitarid', guitars.deleteGuitar);
 router.get('/dashboard/deleteguitarlist/:id', dashboard.deleteGuitarList);
+router.get('/stats', stats.createView);
+router.get('/searchCategory', dashboard.createView);
+router.get('/sortData', dashboard.createView);
 
 // Catch-all route for handling 404 errors
 router.get('/error', (request, response) => response.status(404).end('Page not found.'));

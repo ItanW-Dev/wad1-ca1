@@ -1,0 +1,50 @@
+{{> menu id="stats"}}
+
+<section class="ui center aligned middle aligned segment">
+
+  <h2>Guitar Collection Statistics</h2>
+
+  <h3 class="ui header">
+    Collection Statistics
+  </h3>
+  <p>
+    Your guitar collection now contains: 
+  </p>
+  {{#with stats}}
+   <div class="ui center aligned grid">
+    
+    <div class = "ui sixteen wide column">
+      
+        <div class="ui centered three statistics">
+          <div class="ui statistic">
+            <div class="value">
+              <i class="list icon"></i> 
+            </div>
+            <div class="label">
+              {{displayNumGuitarLists}} guitar collections
+            </div>
+          </div>
+
+          <div class="ui red statistic">
+            <div class="value">
+              <i class="music icon"></i> 
+            </div>
+            <div class="label">
+              {{displayNumGuitars}} guitars
+            </div>
+          </div> 
+		  
+          <div class="ui blue statistic">
+            <div class="value">
+              <i class="balance scale icon"></i> 
+            </div>
+            <div class="label">
+              Average guitars per <br> collection: {{displayAverage}}
+            </div>
+          </div>    
+		  
+        </div> 
+    </div>
+   </div>   
+  {{/with}}
+</section>

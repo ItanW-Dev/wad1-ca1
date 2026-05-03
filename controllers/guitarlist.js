@@ -36,6 +36,18 @@ deleteGuitar(request, response) {
     guitarCollection.removeGuitar(guitarlistId, guitarId);
     response.redirect('/guitar/' + guitarlistId);
 },
+updateGuitar(request, response) {
+    const guitarListId = request.params.id;
+    const guitarId = request.params.guitarid;
+    logger.debug("updating guitar " + guitarId);
+    const updatedGuitar = {
+      id: guitarId,
+      title: request.body.title,
+      description: request.body.description
+    };
+    guitarCollection.editGuitar(guitarListId, guitarId, updatedGuitar);
+    response.redirect('/guitar/' + guitarListId);
+},
 
 };
 

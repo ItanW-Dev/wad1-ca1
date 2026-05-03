@@ -8,22 +8,48 @@ import guitars from "./guitarlist.js";
 const dashboard = {
   createView(request, response) {
     logger.info("Dashboard page loading!");
-    
-    // Fetch all guitars from the collection to display on dashboard
+
+    const searchTerm = request.query.searchTerm || "";
+
+    const guitars = searchTerm
+      ? guitarCollection.searchGuitars(searchTerm)
+      : guitarCollection.getAllGuitars();
+
+    const sortField = request.query.sort;
+    const order = request.query.order === "desc" ? -1 : 1;
+
+    let sorted = guitars;
+
+    if (sortField) {
+      sorted = guitars.slice().sort((a, b) => {
+        if (sortField === "title") {
+          return a.series.localeCompare(b.series) * order;
+        }
+
+        return 0;
+      });
+    }
+
     const viewData = {
-      title: "Guitar App Dashboard",
-      guitars: guitarCollection.getAllGuitars()
+      title: "Guitar Collection Dashboard",
+      guitars: sortField ? sorted : guitars,
+      search: searchTerm,
+      titleSelected: request.query.sort === "title",
+      ascSelected: request.query.order === "asc",
+      descSelected: request.query.order === "desc",
     };
-    
-    // Log the guitars data for debugging
+
     logger.debug(viewData.guitars);
-    
-    response.render('dashboard', viewData);
+
+    response.render("dashboard", viewData);
   },
   addGuitarList(request, response) {
+     const timestamp = new Date();
+
     const newGuitarList = {
       id: uuidv4(),
       series: request.body.series,
+      date: timestamp,
       guitars: [],
     };
     guitarCollection.addGuitarList(newGuitarList);

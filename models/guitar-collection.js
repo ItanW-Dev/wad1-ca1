@@ -34,6 +34,16 @@ removeGuitarList(id) {
     const guitarList = this.getGuitarList(id);
     this.store.removeCollection(this.collection, guitarList);
 },
+editGuitar(id, guitarId, updatedGuitar) {
+    this.store.editItem(this.collection, id, guitarId, this.array, updatedGuitar);
+},
+
+searchGuitars(search) {
+    return this.store.findBy(
+      this.collection,
+      (guitar => guitar.series.toLowerCase().includes(search.toLowerCase()))
+    );
+},
 
 };
 
