@@ -12,7 +12,6 @@ import stats from './controllers/stats.js';
 import accounts from './controllers/accounts.js';
 
 router.get('/start', start.createView);
-
 router.get('/dashboard', dashboard.createView);
 router.get('/about', about.createView);
 // Route to display a specific guitar by ID

@@ -1,34 +1,6 @@
 {
   "users": [
     {
-      "firstName": "homer",
-      "lastName": "simpson",
-      "email": "homer@simpson.com",
-      "password": "secret",
-      "id": "3ad52697-6d98-4d80-8273-084de55a86c0"
-    },
-    {
-      "firstName": "marge",
-      "lastName": "simpson",
-      "email": "marge@simpson.com",
-      "password": "secret",
-      "id": "2b6f0989-7b7f-4a38-ad26-aa06b922d751"
-    },
-    {
-      "firstName": "Itan",
-      "lastName": "Wilczynski",
-      "email": "itan@gmail.com",
-      "password": "1234",
-      "id": "46b18b65-24f5-4c1c-8662-5a8a607f356e"
-    },
-    {
-      "firstName": "John",
-      "lastName": "Doe",
-      "email": "John@Doe.com",
-      "password": "1111",
-      "id": "123c829e-c4ce-4176-a792-4a97f19b595a"
-    },
-    {
       "firstName": "Itan",
       "lastName": "Wilczynski",
       "email": "Itan1@gmail.com",
@@ -41,6 +13,13 @@
       "email": "Johndoe@gmail.com",
       "password": "!Johndoe123",
       "id": "0bf01041-0671-48c9-a618-d9362483d05a"
+    },
+    {
+      "firstName": "Itan",
+      "lastName": "Wilczynski",
+      "email": "Itanwilczinski@gmail.com",
+      "password": "!Itan123",
+      "id": "fe5d3567-6351-487c-8e24-e97f74463f7a"
     }
   ]
 }

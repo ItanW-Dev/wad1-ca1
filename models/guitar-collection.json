@@ -13,33 +13,6 @@
     },
     {
       "userid": "a2e9e465-a22d-453d-8fb0-98b85206b0fe",
-      "id": "4ffbd114-b10c-4d1c-bbc8-cf1eed476cc7",
-      "series": "AZ Series",
-      "date": "2026-05-04T15:25:23.941Z",
-      "guitars": [
-        {
-          "id": "882b6efc-6f77-4d47-8a2e-6916025235d6",
-          "title": "Prestige",
-          "description": "There are three principles behind the Ibanez Prestige line: Precision, Performance, and Playability. Prestige combines high-tech manufacturing techniques with old-world Japanese craftsmanship, in order to achieve true innovation in design and construction. The series incorporates ideas and suggestions from musicians from around the world as the cornerstones of the Prestige production process."
-        },
-        {
-          "id": "afbe6bf4-4fc3-448d-9cf7-c7b5e7672a9e",
-          "title": "Premium",
-          "description": "Designed to Inspire, all Ibanez Premium series are manufactured with select tone woods, high-profile electronics, hardware and dedicated skills of craftsmanship and care in details for your musical journey. The richness of sound, stunning appearance and unrivalled playability of the Ibanez Premium series will open the gate of your reservoir of inspiration."
-        },
-        {
-          "id": "336e4285-e079-45a6-839b-6e2430e49054",
-          "title": "IronLabel",
-          "description": "The Iron Label line was originally developed with metal and nothing but metal in mind. We modded and tweaked until we got to the heaviest-hitting metal axes we’ve ever built. They’re purposefully spartan, and you won’t find a feature here that doesn't contribute directly to a bone rattling, earth shattering tones these guitars pump out. Carrying forward that same philosophy, the next generation of Iron Label guitars take this raw metal energy to a completely new level. They sport totally blacked out looks, and their supercharged electronics amounting to some of the heaviest-swinging metal axes we’ve ever produced. "
-        }
-      ],
-      "image": {
-        "url": "http://res.cloudinary.com/dx6jxooxy/image/upload/v1777908326/ap0pjdh6pznxbodgn78n.png",
-        "public_id": "ap0pjdh6pznxbodgn78n"
-      }
-    },
-    {
-      "userid": "a2e9e465-a22d-453d-8fb0-98b85206b0fe",
       "id": "1b8d8532-40b1-4274-a50f-315b06561e8b",
       "series": "RG series",
       "date": "2026-05-04T15:27:44.605Z",
