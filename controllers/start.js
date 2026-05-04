@@ -1,18 +1,27 @@
 'use strict';
 
 import logger from "../utils/logger.js";
+import accounts from './accounts.js';
+import appStore from '../models/app-store.js';
+import stats from './stats.js';
 
 const start = {
-  createView(request, response) {
+ createView(request, response) {
+    const loggedInUser = accounts.getCurrentUser(request);
     logger.info("Start page loading!");
     
-    // Set up page title for the start/home page
-    const viewData = {
-      title: "Welcome to the Playlist app!",
-    };
+    if (loggedInUser) {
+      const viewData = {
+        title: "Welcome to the Playlist app!",
+        info: appStore.getAppInfo(),
+        fullname: loggedInUser.firstName + ' ' + loggedInUser.lastName,
+        stats: stats.getStats()
+      };
+      response.render('start', viewData);
+    }
+    else response.redirect('/');    
+},
 
-    response.render('start', viewData);   
-  },
 };
 
 export default start;

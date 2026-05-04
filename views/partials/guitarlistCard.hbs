@@ -1,0 +1,32 @@
+      <div class="ui card">
+        <div class="image">
+          <img src="{{image.url}}">
+        </div>
+        <div class="content">
+          <a class="header">{{uppercase series}}</a> 
+          <p>
+            <i class="music icon"></i>
+            {{#if guitars}}
+              Total guitars: {{guitars.length}}
+            {{else}}
+              Empty collection!
+            {{/if}}
+
+            {{#if date}}
+              <br>
+              <i class="calendar alternate outline icon"></i>
+              Created on <i>{{formatDate date}}</i>
+            {{/if}}
+          </p>
+        </div>
+        
+        <div class="extra content">
+          <a href="/guitar/{{id}}" >
+            <i class="ui open folder outline black icon"></i>
+          </a>
+          <a href="/dashboard/deleteguitarlist/{{id}}" >
+            <i class="ui black trash icon"></i>
+          </a>
+        </div>
+          
+      </div>

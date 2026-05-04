@@ -127,17 +127,21 @@ nav.ui.stackable.menu{
   background-color: #dff9b5;
 } 
 
+nav.ui.menu{
+  background-color: #dff9b5;
+}
+
 div.right.menu{
   margin-right: 15px;
   padding: 6px 10px;
   border-radius: 15px;
   background-color: #dff9b5;
 }
-div a#dashboard, div a#about{
+div a#dashboard, div a#about, div a#stats, div a#logout{
   color: #2e7d32;
 }
 
-div a#dashboard:hover, div a#about:hover{
+div a#dashboard:hover, div a#about:hover, div a#stats:hover, div a#logout:hover{
  background-color: #81bd86;
   color: #2e7d32;
 }
@@ -162,4 +166,29 @@ div.middle.menu img{
   justify-content: space-between;
   align-items: center;
   margin-bottom: 1.5em;
+}
+
+.name{
+  padding-top:22.5px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+
+.form{
+  background-color: #c8e6c9;
+}
+
+.ui.stacked.segment{
+  background-color: #d7f5d2;
+}
+.ui.centered.cards.ui.cards .card{
+background-color: #81bd86;
+}
+
+.name{
+  color:#81bd86 ;
+  font-size: x-large;
+  padding: 20px;
 }

@@ -5,19 +5,25 @@ import routes from "./routes.js";
 import logger from "./utils/logger.js";
 import { create } from 'express-handlebars';
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
+import fileUpload from "express-fileupload";
 
 
 const app = express();
 const port = 3000;
 
 // Serve static files from the public directory
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: false, }));
+app.use(cookieParser());
+app.use(fileUpload({useTempFiles: true}));
 
 // Configure Handlebars as the templating engine
 
 const handlebars = create({
-  extname: '.hbs', 
+  extname: '.hbs',
+  partialsDir: 'views/partials',
     helpers: {
       uppercase: (inputString) => {
         return inputString.toUpperCase();

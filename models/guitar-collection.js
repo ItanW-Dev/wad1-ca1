@@ -24,16 +24,34 @@ addGuitar(id, guitar) {
     this.store.addItem(this.collection, id, this.array, guitar);
 },
 
-addGuitarList(guitarList) {
+async addGuitarList(guitarList, file, response) {
+  try {
+    guitarList.image = await this.store.addToCloudinary(file);
     this.store.addCollection(this.collection, guitarList);
+    response();
+  } catch (error) {
+    logger.error("Error processing guitar list:", error);
+    response(error);
+  }
 },
 removeGuitar(id, guitarId) {
     this.store.removeItem(this.collection, id, this.array, guitarId);
 },
-removeGuitarList(id) {
+async removeGuitarList(id, response) {
     const guitarList = this.getGuitarList(id);
+
+    if (guitarList.image && guitarList.image.public_id) {
+      try {
+        await this.store.deleteFromCloudinary(guitarList.image.public_id);
+        logger.info("Cloudinary image deleted");
+      } catch (error) {
+        logger.error("Error deleting Cloudinary image:", error);
+      }
+    }
     this.store.removeCollection(this.collection, guitarList);
+    response();
 },
+
 editGuitar(id, guitarId, updatedGuitar) {
     this.store.editItem(this.collection, id, guitarId, this.array, updatedGuitar);
 },
@@ -43,6 +61,17 @@ searchGuitars(search) {
       this.collection,
       (guitar => guitar.series.toLowerCase().includes(search.toLowerCase()))
     );
+},
+
+getUserGuitars(userid) {
+  return this.store.findBy(this.collection, (guitar => guitar.userid === userid));
+},
+
+searchUserGuitars(search, userid) {
+  return this.store.findBy(
+    this.collection,
+    (guitar => guitar.userid === userid && guitar.series.toLowerCase().includes(search.toLowerCase()))
+  );
 },
 
 };

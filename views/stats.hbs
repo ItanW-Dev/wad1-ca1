@@ -5,23 +5,26 @@
   <h2>Guitar Collection Statistics</h2>
 
   <h3 class="ui header">
-    Collection Statistics
+    Global Collection Statistics
   </h3>
+
   <p>
-    Your guitar collection now contains: 
+    The entire guitar collection now contains:
   </p>
-  {{#with stats}}
+
+  {{#with globalStats}}
    <div class="ui center aligned grid">
     
-    <div class = "ui sixteen wide column">
+    <div class="ui sixteen wide column">
       
         <div class="ui centered three statistics">
+
           <div class="ui statistic">
             <div class="value">
               <i class="list icon"></i> 
             </div>
             <div class="label">
-              {{displayNumGuitarLists}} guitar collections
+              {{totalLists}} guitar collections
             </div>
           </div>
 
@@ -30,7 +33,7 @@
               <i class="music icon"></i> 
             </div>
             <div class="label">
-              {{displayNumGuitars}} guitars
+              {{totalGuitars}} guitars
             </div>
           </div> 
 		  
@@ -39,7 +42,7 @@
               <i class="balance scale icon"></i> 
             </div>
             <div class="label">
-              Average guitars per <br> collection: {{displayAverage}}
+              Average guitars per <br> collection: {{average}}
             </div>
           </div>    
 		  
@@ -47,4 +50,51 @@
     </div>
    </div>   
   {{/with}}
+   <h3 class="ui header">
+    User Collection Statistics
+  </h3>
+
+  <p>
+    Your guitar collection now contains:
+  </p>
+
+  {{#with userStats}}
+   <div class="ui center aligned grid">
+    
+    <div class="ui sixteen wide column">
+      
+        <div class="ui centered three statistics">
+
+          <div class="ui statistic">
+            <div class="value">
+              <i class="list icon"></i> 
+            </div>
+            <div class="label">
+              {{totalLists}} guitar collections
+            </div>
+          </div>
+
+          <div class="ui red statistic">
+            <div class="value">
+              <i class="music icon"></i> 
+            </div>
+            <div class="label">
+              {{totalGuitars}} guitars
+            </div>
+          </div> 
+		  
+          <div class="ui blue statistic">
+            <div class="value">
+              <i class="balance scale icon"></i> 
+            </div>
+            <div class="label">
+              Average guitars per <br> collection: {{average}}
+            </div>
+          </div>    
+		  
+        </div> 
+    </div>
+   </div>   
+  {{/with}}
+
 </section>

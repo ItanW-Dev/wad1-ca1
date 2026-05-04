@@ -1,13 +1,12 @@
 {
   "info": {
     "appTitle": "Ibanez Guitar Catalog",
-    "version": 1.0,
+    "version": 2.0,
     "creator": [
       {
         "name": "Itan Wilczynski",
         "role": "Web Developer"
       }
-     
     ],
     "location": "Waterford"
   } 
